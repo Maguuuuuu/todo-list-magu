@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <form id="form-add-todo">
+            <input
+             type="text" 
+             name="task"
+             id="task" 
+             placeholder="insira sua tarefa"/>
+            <button type="submit" id="botao">+</button>
+        </form>
+            <ul id="todo-list"> 
+                    <li>
+                        <input type="checkbox" onclick="concluirTarefa(this)">
+                        <span>tarefa 1</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="concluirTarefa(this)">
+                        <span>tarefa 2</span>
+                    </li> 
+                    <li>
+                        <input type="checkbox" onclick="concluirTarefa(this)">
+                        <span>tarefa 3</span>
+                    </li>
+            </ul>
+        </div>
+        <script src="script.js"></script>
+</body>
+</html>

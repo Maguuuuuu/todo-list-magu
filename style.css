@@ -1,0 +1,49 @@
+
+.container{
+    width: 500px;
+    margin: 0 auto;
+}
+
+#form-add-todo{
+    display: flex;
+    gap: 0.5rem;
+
+}
+
+#form-add-todo input{
+    flex: 1;
+    border: 1px solid black;
+    height: 2rm;
+    padding: 0 0.5rem;
+}
+
+
+
+#form-add-todo button{
+    background-color: yellow;
+    width: 3rem;
+    border: none;
+    cursor: pointer;
+
+}
+
+#botao:hover{
+    background-color: chartreuse;
+}
+
+#todo-list{
+    list-style: none;
+    word-wrap: break-word;
+    padding: 0;
+    border: 1px solid rgb(233, 219, 219);
+}
+
+
+#todo-list li{
+    padding: 0,5rem 1rem;
+
+}
+
+#todo-list li:nth-child(odd){
+    background-color: gray;
+}
