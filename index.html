@@ -7,30 +7,36 @@
     
 </head>
 <body>
-    <div class="container">
+    <div id="container">
+        <div id="desenhho">
+            <img src="imagens/imagem-1.jpg" alt="desenho de uma personagem feminina">
+        </div>
+        <div id="titulo">
+            <h1>AFAZERES</h1>
+        </div>
         <form id="form-add-todo">
             <input
-             type="text" 
-             name="task"
-             id="task" 
-             placeholder="insira sua tarefa"/>
-            <button type="submit" id="botao">+</button>
+            type="text" 
+            name="task"
+            id="task" 
+            placeholder="insira sua tarefa"/>
+        <button type="submit" id="botao">+</button>
         </form>
             <ul id="todo-list"> 
-                    <li>
-                        <input type="checkbox" onclick="concluirTarefa(this)">
-                        <span>tarefa 1</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" onclick="concluirTarefa(this)">
-                        <span>tarefa 2</span>
-                    </li> 
-                    <li>
-                        <input type="checkbox" onclick="concluirTarefa(this)">
-                        <span>tarefa 3</span>
-                    </li>
-            </ul>
-        </div>
+                <li>
+                    <input type="checkbox" onclick="concluirTarefa(this)">
+                    <div>tarefa 1</div>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="concluirTarefa(this)">
+                    <div>tarefa 2</div>
+                </li> 
+                <li>
+                    <input type="checkbox" onclick="concluirTarefa(this)">
+                    <div>tarefa 3</div>
+                </li>
+        </ul>
+    </div>
         <script src="script.js"></script>
 </body>
 </html>
