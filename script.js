@@ -1,41 +1,76 @@
 
 
-function concluirTarefa (checkbox){
-    const tarefa = checkbox.closest('li');
-    tarefa.remove();
-}
+// function concluirTarefa (checkbox){
+//     const tarefa = checkbox.closest('li');
+//     tarefa.remove();
+// }
 
 
 
 
-function adicionarTarefa (event){
+// function adicionarTarefa (event){
+//     event.preventDefault();
+//     const inputTarefa = event.target.task;
+//     const textoTarefa = inputTarefa.value.trim();
+
+
+//     if (textoTarefa === ''){
+//         alert('a tarefa precisa de um título');
+//         return;
+//     }
+
+//     const htmlTarefa = `
+//         <li>
+//             <input type="checkbox" onclick="concluirTarefa(this)"/>
+//             <span>${textoTarefa}</span>
+//         </li>
+//         `;
+
+//     document
+//         .querySelector('#todo-list')
+//         .insertAdjacentHTML('beforeend' , htmlTarefa.trim());
+
+//     inputTarefa.value = ''
+// }
+
+// document
+//     .querySelector('#form-add-todo')
+//     .addEventListener('submit', adicionarTarefa);
+
+
+document.getElementById("botao").addEventListener("click",adicionarTarefa);
+document.addEventListener("click",concluirTarefa)
+
+function adicionarTarefa(event){
     event.preventDefault();
-    const inputTarefa = event.target.task;
-    const textoTarefa = inputTarefa.value.trim();
+    console.log("função adicionar tarefa");
 
+    const tarefa = document.getElementById("task").value;
 
-    if (textoTarefa === ''){
-        alert('a tarefa precisa de um título');
-        return;
-    }
+        if(tarefa !== ""){
 
-    const htmlTarefa = `
-        <li>
-            <input type="checkbox" onclick="concluirTarefa(this)"/>
-            <span>${textoTarefa}</span>
-        </li>
-        `;
+            const criarTarefa = document.createElement("li");
 
-    document
-        .querySelector('#todo-list')
-        .insertAdjacentHTML('beforeend' , htmlTarefa.trim());
+            const criarCheck = document.createElement("input");
+            criarCheck.type = "checkbox";
+            criarTarefa.appendChild(criarCheck);
 
-    inputTarefa.value = ''
+            const criarTexto = document.createTextNode(tarefa)
+            criarTarefa.appendChild(criarTexto);
+
+            // document.getElementById("task").appendChild(criarTarefa);
+            document.getElementById("todo-list").appendChild(criarTarefa);
+            document.getElementById("task").value = ""; //FAZ COM QUE O INPUT SEJA LIMPO DEPOIS DE DAR ENTER
+        } else {
+            alert("Por favor, insira uma tarefa.");
+        }
 }
 
-document
-    .querySelector('#form-add-todo')
-    .addEventListener('submit', adicionarTarefa);
-
-
-
+function concluirTarefa(){
+    console.log("função concluir tarefa");
+    const caixaChecked = document.getElementsByClassName("check");
+    const tarefaDeletada = document.querySelector("li");
+    if(caixaChecked.checked == true){
+        tarefaDeletada.remove()
+    }
+}
