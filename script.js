@@ -39,7 +39,8 @@
 
 
 document.getElementById("botao").addEventListener("click",adicionarTarefa);
-document.addEventListener("click",concluirTarefa)
+// document.addEventListener("click",concluirTarefa)
+// concluirTarefa()
 
 function adicionarTarefa(event){
     event.preventDefault();
@@ -66,11 +67,20 @@ function adicionarTarefa(event){
         }
 }
 
-function concluirTarefa(){
-    console.log("função concluir tarefa");
-    const caixaChecked = document.getElementsByClassName("check");
-    const tarefaDeletada = document.querySelector("li");
-    if(caixaChecked.checked == true){
-        tarefaDeletada.remove()
-    }
-}
+// function concluirTarefa(){
+//     console.log("função concluir tarefa");
+//     const caixaChecked = document.getElementsByClassName("check");
+//     const tarefaDeletada = document.querySelector("li");
+//     if(caixaChecked.checked == true){
+//         tarefaDeletada.remove()
+//     }
+// }
+
+// function concluirTarefa(){
+//     const checkbox = 
+//     const listaTarefas = document.querySelectorAll("li");
+//     Array.from(listaTarefas);
+//     console.log(listaArray);
+
+// }
+

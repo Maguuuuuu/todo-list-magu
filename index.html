@@ -4,38 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> <link rel="stylesheet" href="style.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="container">
-        <div id="desenhho">
-            <img src="imagens/imagem-1.jpg" alt="desenho de uma personagem feminina">
-        </div>
         <div id="titulo">
             <h1>AFAZERES</h1>
         </div>
-        <form id="form-add-todo">
-            <input
-            type="text" 
-            name="task"
-            id="task" 
-            placeholder="insira sua tarefa"/>
-        <button type="submit" id="botao">+</button>
-        </form>
+        <div id="desenhho">
+            <img src="imagens/imagem-1.jpg" alt="desenho de uma personagem feminina">
+        </div>
+        <div>
+            <form id="form-add-todo">
+                <input
+                type="text" 
+                name="task"
+                id="task" />
+            <button type="submit" id="botao">+</button>
+            </form>
+        </div>
+        <div>
             <ul id="todo-list"> 
                 <li>
                     <input type="checkbox" class="check" onclick="concluirTarefa()">
-                    <div>tarefa 1</div>
+                    <span>tarefa 1</span>
                 </li>
                 <li>
                     <input type="checkbox" class="check" onclick="concluirTarefa()">
-                    <div>tarefa 2</div>
+                    <span>tarefa 2</span>
                 </li> 
                 <li>
                     <input type="checkbox" class="check" onclick="concluirTarefa()">
-                    <div>tarefa 3</div>
+                    <span>tarefa 3</span>
                 </li>
-        </ul>
+            </ul>
+        </div>
     </div>
         <script src="script.js"></script>
 </body>

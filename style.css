@@ -7,7 +7,10 @@
     font-style: normal;
 }
 body{
-    background-color: rgb(247, 195, 200);
+    background-color: rgb(243, 245, 211);
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 
@@ -18,93 +21,88 @@ h1{
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#titulo{
+    margin-top: 30px;
 }
 
 img{
-    max-height: 150px;
+    max-height: 170px;
     height: auto;
     width: auto;
     margin: 10px auto;
-    text-align: center;
     border-radius: 100px;
 }
 
-#desenho{
+
+
+div{
     text-align: center;
 }
-
 
 #container{
     display: flexbox;
-    width: 500px;
+    width: 400px;
     height: fit-content;
-    margin: 0 auto;
+    margin: 30px auto;
     background-color: antiquewhite;
     padding-bottom: 30px;
+    padding-top: 10px;
     background-image: url(imagens/background.jpg);
-    /* align-items: center;
-    justify-content: center; */
-}
-
-ul li{
-    justify-content: center;
-    width: 460px ;
-    border-radius: 30px;
-}
-
-
-/* #form-add-todo input{
-    flex: 1;
-    border: none;
-    height: 2rm;
-    padding: 0 0.5rem;
-
-} */
-
-
-
-#form-add-todo button{
-    background-color:  rgb(221, 103, 103);
-    width: 3rem;
-    border: none;
-    cursor: pointer;
-
-}
-
-#botao{
-    border-radius: 100px;
-}
-
-#botao:hover{
-    background-color: chartreuse;
+    text-align: center;
 }
 
 #todo-list{
     list-style: none;
     word-wrap: break-word;
     padding: 0;
-    border: 1px solid rgb(233, 219, 219);
-    display: inline;
+    /* border: 1px solid rgb(233, 219, 219); */
+    /* display: inline-flex; */
+    margin-left: 10px;
+    margin-right: 10px;
+    /* width: fit-content; */
+    
 }
 
-
 #todo-list li{
-    padding: 0,5rem 1rem;
-
+    text-align: left;
 }
 
 #todo-list li:nth-child(odd){
     background-color:rgb(224, 203, 157);
-}
-
-#form-add-todo input{
-    border: none;
-    padding: 20px;
     border-radius: 30px;
 }
 
 #form-add-todo{
-    display: flex;
+    display: inline-flex;
     gap: 0.5rem;
     padding: 10px;
 }
+
+#form-add-todo input{
+    border: none;
+    padding: 10px;
+    /* margin: 10px; */
+    border-radius: 30px;
+}
+
+#form-add-todo button{
+    background-color:  rgb(145, 128, 128);
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+    
+}
+
+#botao:hover{
+    background-color: rgb(247, 66, 66);
+}
+
+
+
+
+
