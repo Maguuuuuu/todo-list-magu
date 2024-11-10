@@ -5,9 +5,6 @@
 //     tarefa.remove();
 // }
 
-
-
-
 // function adicionarTarefa (event){
 //     event.preventDefault();
 //     const inputTarefa = event.target.task;
@@ -19,12 +16,12 @@
 //         return;
 //     }
 
-//     const htmlTarefa = `
-//         <li>
-//             <input type="checkbox" onclick="concluirTarefa(this)"/>
-//             <span>${textoTarefa}</span>
-//         </li>
-//         `;
+    // const htmlTarefa = `
+    //     <li>
+    //         <input type="checkbox" onclick="concluirTarefa(this)"/>
+    //         <span>${textoTarefa}</span>
+    //     </li>
+    //     `;
 
 //     document
 //         .querySelector('#todo-list')
@@ -46,26 +43,28 @@ function adicionarTarefa(event){
     event.preventDefault();
     console.log("função adicionar tarefa");
 
-    const tarefa = document.getElementById("task").value;
+    const tarefa = document.getElementById('task').value;
 
         if(tarefa !== ""){
 
-            const criarTarefa = document.createElement("li");
+            const criarTarefa = document.createElement('li');
 
-            const criarCheck = document.createElement("input");
-            criarCheck.type = "checkbox";
+            const criarCheck = document.createElement('input');
+            criarCheck.type = 'checkbox';
             criarTarefa.appendChild(criarCheck);
 
             const criarTexto = document.createTextNode(tarefa)
             criarTarefa.appendChild(criarTexto);
 
             // document.getElementById("task").appendChild(criarTarefa);
-            document.getElementById("todo-list").appendChild(criarTarefa);
-            document.getElementById("task").value = ""; //FAZ COM QUE O INPUT SEJA LIMPO DEPOIS DE DAR ENTER
+            document.getElementById('todo-list').appendChild(criarTarefa);
+            document.getElementById('task').value = ""; //FAZ COM QUE O INPUT SEJA LIMPO DEPOIS DE DAR ENTER
         } else {
             alert("Por favor, insira uma tarefa.");
         }
 }
+
+
 
 // function concluirTarefa(){
 //     console.log("função concluir tarefa");
@@ -84,3 +83,7 @@ function adicionarTarefa(event){
 
 // }
 
+function concluirTarefa(checkbox) {
+    const marcarCheckbox = checkbox.closest('li');
+    marcarCheckbox.remove();
+}
