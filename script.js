@@ -36,8 +36,12 @@
 
 
 document.getElementById("botao").addEventListener("click",adicionarTarefa);
-// document.addEventListener("click",concluirTarefa)
-// concluirTarefa()
+
+function concluirTarefa(checkbox) {
+    const marcarCheckbox = checkbox.closest('li');
+    marcarCheckbox.remove();
+}
+
 
 function adicionarTarefa(event){
     event.preventDefault();
@@ -45,20 +49,25 @@ function adicionarTarefa(event){
 
     const tarefa = document.getElementById('task').value;
 
+
         if(tarefa !== ""){
 
             const criarTarefa = document.createElement('li');
 
             const criarCheck = document.createElement('input');
             criarCheck.type = 'checkbox';
+            criarCheck.onclick = function() { concluirTarefa(this); };
             criarTarefa.appendChild(criarCheck);
 
             const criarTexto = document.createTextNode(tarefa)
             criarTarefa.appendChild(criarTexto);
 
-            // document.getElementById("task").appendChild(criarTarefa);
+            
+
+            // document.getElementById('task').appendChild(criarTarefa);
             document.getElementById('todo-list').appendChild(criarTarefa);
             document.getElementById('task').value = ""; //FAZ COM QUE O INPUT SEJA LIMPO DEPOIS DE DAR ENTER
+            document.addEventListener('click',criarTarefa);
         } else {
             alert("Por favor, insira uma tarefa.");
         }
@@ -66,24 +75,12 @@ function adicionarTarefa(event){
 
 
 
-// function concluirTarefa(){
-//     console.log("função concluir tarefa");
-//     const caixaChecked = document.getElementsByClassName("check");
-//     const tarefaDeletada = document.querySelector("li");
-//     if(caixaChecked.checked == true){
-//         tarefaDeletada.remove()
+
+// function adicionarMensagem(){
+//     const mensagem = document.createElement('p');
+//     const criarMensagem = document.createTextNode("Arrasou! Você terminou suas tarefas :)");
+//     if('li'===null){
+//         mensagem.appendChild(criarMensagem)
 //     }
 // }
 
-// function concluirTarefa(){
-//     const checkbox = 
-//     const listaTarefas = document.querySelectorAll("li");
-//     Array.from(listaTarefas);
-//     console.log(listaArray);
-
-// }
-
-function concluirTarefa(checkbox) {
-    const marcarCheckbox = checkbox.closest('li');
-    marcarCheckbox.remove();
-}
