@@ -45,7 +45,7 @@ div{
 
 #container{
     display: flexbox;
-    width: 400px;
+    width: 450px;
     height: fit-content;
     margin: 30px auto;
     background-color: antiquewhite;
@@ -56,28 +56,51 @@ div{
     /* /* border-style: dotted;
     border-color: rgb(145, 128, 128);
     box-sizing: 3px; */
-} */
+} 
 
+#lists{
+    display: flex;
+}
 #todo-list{
     list-style: none;
     word-wrap: break-word;
     padding: 0;
     /* border: 1px solid rgb(233, 219, 219); */
     /* display: inline-flex; */
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 18px;
+    margin-right: auto;
     /* width: fit-content; */
+    width: 195px;
+    background-color: rgb(252, 209, 227);
+    border-radius: 20px;
     
+}
+
+#todo-list-checked{
+    word-wrap: break-word;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 18px;
+    width: 195px;
+    background-color: rgb(252, 209, 227);
+    list-style-position: inside;
+    border-radius: 20px;
 }
 
 #todo-list li{
     text-align: left;
+    margin-left: 7px;
 }
 
-#todo-list li:nth-child(odd){
+#todo-list-checked li{
+    text-align: left;
+    margin-left: 7px;
+}
+
+/* #todo-list li:nth-child(odd){
     background-color:rgb(224, 203, 157);
     border-radius: 30px;
-}
+} */
 
 #form-add-todo{
     display: inline-flex;

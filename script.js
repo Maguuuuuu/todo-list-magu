@@ -35,11 +35,32 @@
 //     .addEventListener('submit', adicionarTarefa);
 
 
+
+
+
+ // if('todo-list' === null){
+
+    //     console.log("todas as tarefas foram concluidas");
+    
+    //     const mensagem = document.createElement('p');
+    //     const textoMensagem = mensagem.createTextNode("Arrasou! Você terminou todos os seus afazeres!")
+    // }
+
+
+
+
 document.getElementById("botao").addEventListener("click",adicionarTarefa);
 
+
 function concluirTarefa(checkbox) {
+    console.log("concluirTarefa");
     const marcarCheckbox = checkbox.closest('li');
     marcarCheckbox.remove();
+    
+    document.createTextNode(marcarCheckbox);
+
+    const tarefaChecked = document.createElement('li')
+    document.getElementById('todo-list-checked').appendChild(marcarCheckbox);
 }
 
 
@@ -59,7 +80,7 @@ function adicionarTarefa(event){
             criarCheck.onclick = function() { concluirTarefa(this); };
             criarTarefa.appendChild(criarCheck);
 
-            const criarTexto = document.createTextNode(tarefa)
+            const criarTexto = document.createTextNode(tarefa);
             criarTarefa.appendChild(criarTexto);
 
             
@@ -72,6 +93,8 @@ function adicionarTarefa(event){
             alert("Por favor, insira uma tarefa.");
         }
 }
+
+
 
 
 
