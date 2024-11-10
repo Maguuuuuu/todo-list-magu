@@ -61,6 +61,9 @@ function concluirTarefa(checkbox) {
 
     const tarefaChecked = document.createElement('li')
     document.getElementById('todo-list-checked').appendChild(marcarCheckbox);
+    checkbox.remove();
+    marcarCheckbox.style.textDecoration = "line-through"
+
 }
 
 

@@ -73,6 +73,7 @@ div{
     width: 195px;
     background-color: rgb(252, 209, 227);
     border-radius: 20px;
+    padding-bottom: 15px;
     
 }
 
@@ -85,6 +86,8 @@ div{
     background-color: rgb(252, 209, 227);
     list-style-position: inside;
     border-radius: 20px;
+    padding-bottom: 15px;
+    list-style: none;
 }
 
 #todo-list li{
