@@ -3,32 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> <link rel="stylesheet" href="style.css">
+    <title>todo-list-magu</title> <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="container">
-        <div id="titulo">
+        <div>
             <h1>AFAZERES</h1>
+            <!-- <img src="imagens/titulo.jpg" alt="titulo'afazeres'escrito a mão" id="titulo"> -->
         </div>
         <div id="desenhho">
             <img src="imagens/imagem-1.jpg" alt="desenho de uma personagem feminina">
         </div>
-        <div>
+        <div id="forms">
             <form id="form-add-todo">
-                <input
-                type="text" 
-                name="task"
-                id="task" />
-            <button type="submit" id="botao">+</button>
+                <span id="input-add-todo">
+                    <legend>insira sua tarefa</legend>
+                        <input
+                        type="text" 
+                        name="task"
+                        id="task" />
+                </span>
+                <span id="input-add-prioridade">
+                    <legend>nível de prioridade da tarefa:</legend>
+                    <input type="radio" 
+                    id="p1" 
+                    value="p1" 
+                    name="prioridade" />
+                    <label for="p1">p1</label>
+                    <input type="radio" 
+                    id="p2" 
+                    value="p2" 
+                    name="prioridade" />
+                    <label for="p2">p2</label>
+                    <input type="radio" 
+                    id="p3" 
+                    value="p3" 
+                    name="prioridade"/>
+                    <label for="p3">p3</label>
+                    <input type="radio" 
+                    id="p4" 
+                    value="p4" 
+                    name="prioridade"/>
+                    <label for="p4">p4</label>
+                    <input type="radio" 
+                    id="p5" 
+                    value="p5" 
+                    name="prioridade"/>
+                    <label for="p5">p5</label>
+                    <input type="radio" 
+                    id="p6" 
+                    value="p6" 
+                    name="prioridade"/>
+                    <label for="p6">p6</label>
+                </span>
+                <div id="div-botão">
+                    <button type="submit" id="botao">+</button>
+                </div>
             </form>
         </div>
         <div id="lists">
             <ul id="todo-list"> 
                 <h3>Preciso fazer:</h3>
-                <li>
+                <!-- <li>
                     <input type="checkbox" 
                     class="check" 
                     id="checkbox1"
@@ -46,8 +85,7 @@
                     class="check" 
                     onclick="concluirTarefa(this)">
                     <span>tarefa 3</span>
-                </li>
-                <p></p>
+                </li> -->
             </ul>
             <ul id="todo-list-checked">
                 <h3>Já fiz:</h3>
