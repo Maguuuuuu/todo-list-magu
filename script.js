@@ -11,12 +11,22 @@ function concluirTarefa(checkbox) {
     
     document.createTextNode(marcarCheckbox);
 
+
     document.getElementById('todo-list-checked').appendChild(marcarCheckbox);
+
+    const deletarIcone = document.getElementsByClassName('custom-icon');
+        for(var i = 0; i < deletarIcone.length; i++){
+            deletarIcone[i].remove()
+        }
     checkbox.remove();
     marcarCheckbox.style.backgroundColor = 'rgb(253, 243, 244)'
     marcarCheckbox.style.textDecoration = "line-through";
     
-    
+    const listaDeTarefas = document.getElementsByClassName('list-prioridade')
+
+    if(listaDeTarefas){
+        listaDeTarefas.innerHTML =''
+    }
 }
  
     
@@ -36,17 +46,22 @@ function adicionarTarefa(event){
             const criarCheck = document.createElement('input');
             criarCheck.type = 'checkbox';
             criarCheck.onclick = function() { concluirTarefa(this); };
-            criarCheck.name = 'checkCriado'
+
+            const botaoRemover = document.createElement('button');
+            botaoRemover.innerHTML = '<i class="custom-icon"></i>';
+            botaoRemover.onclick = function () {
+                criarTarefa.remove();
+            };
 
             criarTarefa.appendChild(criarCheck);
             criarTarefa.appendChild(criarTexto);
-
+            criarTarefa.appendChild(botaoRemover);
             
 
             const prioridade = document.getElementsByName('prioridade');
 
 
-            //COLOCAR COR NAS PRIORIDADES DIFERENTES/ 
+            //COLOCAR COR NAS PRIORIDADES DIFERENTES E ORDENAR A LISTA/ 
             for(var i = 0; i<prioridade.length; i++){
                 if(prioridade[0].checked){ 
                     criarTarefa.style.backgroundColor = 'rgb(248, 4, 28)';
@@ -63,7 +78,6 @@ function adicionarTarefa(event){
             }
 
             
-
             document.getElementById('todo-list-unchecked').appendChild(criarTarefa);
         
             document.getElementById('task').value = ""; //FAZ COM QUE O INPUT FIQUE EM BRANCO DEPOIS DE DAR ENTER
