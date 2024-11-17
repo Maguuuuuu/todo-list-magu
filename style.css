@@ -84,7 +84,7 @@ div{
 }
 
 #form-add-todo button{
-    background-color:  rgb(145, 128, 128);
+    background-color: rgb(145, 128, 128);
     width: 30px;
     height: 30px;
     border: none;
@@ -99,7 +99,7 @@ div{
 }
 
 #botao:hover{
-    background-color: rgb(240, 23, 23);
+    background-color: rgb(229, 255, 0);
 }
 
 #lists{
@@ -119,6 +119,7 @@ div{
     background-color:rgb(253, 243, 244);
     border-radius: 20px;
     padding-bottom: 15px;
+    
     
 }
 
@@ -146,7 +147,7 @@ div{
     margin-left: 10px;
 } 
 
-#todo-list:empty::after{
+.list-prioridade:empty::after{
     content: "Arrasou! Você terminou suas tarefas!"
 }
 
@@ -165,41 +166,80 @@ h3{
 }
 
 #todo-list-p1{
+    word-wrap: break-word;
+    height: fit-content;
     list-style: none;
     padding: 0px;
+    text-align: left;
+    margin-left: 0px;
 }
 
 #todo-list-p2{ 
+    word-wrap: break-word;
+    height: fit-content;
     list-style: none;
     padding: 0px;
+    text-align: left;
+    margin-left: 0px;
 }
 
 #todo-list-p3{
+    word-wrap: break-word;
+    height: fit-content;
     list-style: none;
     padding: 0px;
+    text-align: left;
+    margin-left: 0px;
 }
 
 #todo-list-unchecked{
+    word-wrap: break-word;
+    height: fit-content;
     list-style: none;
     padding: 0px;
-}
-
-/* #todo-list-p1{
     text-align: left;
-    border-radius: 30px;
+    margin-left: 0px;
 }
-
-#todo-list-p2{
-    text-align: left;
-    border-radius: 30px;
-}
-
-#todo-list-p3{
-    text-align: left;
-    border-radius: 30px;
-} */
 
 li{
+    display: flex;
+    justify-content: space-between;
     text-align: left;
     border-radius: 30px;
+    word-wrap: break-word;
+    height: fit-content;
+    
+}
+
+.custom-icon {
+    display: inline-block;
+    width: 19px; /* Ajuste conforme necessário */
+    height: 19px;
+    background-image: url(icons/icone.png);
+    background-size: contain; /* Ajuste a imagem ao tamanho do ícone */
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none; /* Remove borda */
+    margin: 0; /* Garante que não há margens desnecessárias */
+    padding: 0; /* Remove padding */
+    box-shadow: none; /* Remove sombras que pareçam bordas */
+    background-color: transparent;
+    vertical-align: middle;
+}
+
+li button, .custom-icon{
+    outline: none;
+    border: none;
+}
+li button{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /* Mantém o botão clicável */
+    background-color: transparent;
+}
+
+#todo-list-p1 li{
+    text-align: left;
 }
