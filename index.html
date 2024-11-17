@@ -7,14 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="container">
         <div>
-            <h1>AFAZERES</h1>
-            <!-- <img src="imagens/titulo.jpg" alt="titulo'afazeres'escrito a mão" id="titulo"> -->
-        </div>
-        <div id="desenhho">
+            <h1>lista de tarefas</h1>
             <img src="imagens/imagem-1.jpg" alt="desenho de uma personagem feminina">
         </div>
         <div id="forms">
@@ -30,34 +30,34 @@
                     <legend>nível de prioridade da tarefa:</legend>
                     <input type="radio" 
                     id="p1" 
-                    value="p1" 
-                    name="prioridade" />
+                    value="1" 
+                    name="prioridade"/>
                     <label for="p1">p1</label>
                     <input type="radio" 
                     id="p2" 
-                    value="p2" 
-                    name="prioridade" />
+                    value="2" 
+                    name="prioridade"/>
                     <label for="p2">p2</label>
                     <input type="radio" 
                     id="p3" 
-                    value="p3" 
+                    value="3" 
                     name="prioridade"/>
                     <label for="p3">p3</label>
-                    <input type="radio" 
+                    <!-- <input type="radio" 
                     id="p4" 
-                    value="p4" 
+                    value="4" 
                     name="prioridade"/>
                     <label for="p4">p4</label>
                     <input type="radio" 
                     id="p5" 
-                    value="p5" 
+                    value="5" 
                     name="prioridade"/>
                     <label for="p5">p5</label>
                     <input type="radio" 
                     id="p6" 
-                    value="p6" 
+                    value="6" 
                     name="prioridade"/>
-                    <label for="p6">p6</label>
+                    <label for="p6">p6</label> -->
                 </span>
                 <div id="div-botão">
                     <button type="submit" id="botao">+</button>
@@ -67,6 +67,16 @@
         <div id="lists">
             <ul id="todo-list"> 
                 <h3>Preciso fazer:</h3>
+                <ul id="todo-list-p1">
+                    <li id="item-p1"></li>
+                </ul>
+                <ul id="todo-list-p2">
+                    <li id="item-p2"></li>
+                </ul>
+                <ul id="todo-list-p3">
+                    <li id="item-p3"></li>
+                </ul>
+                <ul id="todo-list-unchecked"></ul>
                 <!-- <li>
                     <input type="checkbox" 
                     class="check" 
@@ -87,12 +97,17 @@
                     <span>tarefa 3</span>
                 </li> -->
             </ul>
+            <!-- escrever varias ul -->
+            
             <ul id="todo-list-checked">
                 <h3>Já fiz:</h3>
                 <!-- <li>teste</li>
                 <li>teste</li>
                 <li>teste</li> -->
             </ul>
+            <!-- pesquisar como saber se a ul está vazia
+            como incluir e remover uma classe pelo javascript num document html -->
+
         </div>
     </div>
         <script src="script.js"></script>
