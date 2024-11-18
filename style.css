@@ -1,11 +1,4 @@
 
-@font-face {
-    font-family:'CrossStichDelicate';
-    src: url('fonts/crossstitchdelicate.ttf')
-    format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 body{
     background-image: url(imagens/background2.jpg);
@@ -61,6 +54,8 @@ div{
 }
 
 #forms{
+    justify-content: center;
+    align-items: center;
     width: fit-content;
     margin-right: 10px;
     margin-left: 10px;
@@ -72,7 +67,7 @@ div{
     width: fit-content;
     margin: 10px;
     gap: 0.5rem;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 #task{
@@ -111,7 +106,7 @@ div{
     word-wrap: break-word;
     padding: 0;
     /* border: 1px solid rgb(233, 219, 219); */
-    /* display: inline-flex; */
+    display: block;
     margin-left: 1.6rem;
     margin-right: auto;
     /* width: fit-content; */
@@ -119,7 +114,8 @@ div{
     background-color:rgb(253, 243, 244);
     border-radius: 20px;
     padding-bottom: 15px;
-    
+    /* justify-content: flex-start;
+    align-items: flex-start; */
     
 }
 
@@ -137,26 +133,32 @@ div{
     
 }
 
-/* #todo-list li{
-    text-align: left;
-    border-radius: 30px;
-} */
-
 #todo-list-checked li{
     text-align: left;
     margin-left: 10px;
 } 
 
-.list-prioridade:empty::after{
-    content: "Arrasou! Você terminou suas tarefas!"
-}
+/* #todo-list:empty::after{
+    content: "Arrasou!!!!! Você terminou suas tarefas!"
+} */
 
 legend{
     background-color: rgb(253, 243, 244);
     border-radius: 30px;
-    font-size: larger;
+    font-size: 20px;
     margin-bottom: 5px;
     font-weight: 500;
+}
+
+#input-add-todo legend, #input-add-todo input{
+    width: 15.3rem;
+    
+}
+
+#input-add-prioridade legend{
+    padding-left: 11px;
+    padding-right: 11px;
+    width: 11.5rem;
 }
 
 h3{
@@ -165,81 +167,61 @@ h3{
     font-style: normal;
 }
 
-#todo-list-p1{
+#todo-list-p1, #todo-list-p2, #todo-list-p3, #todo-list-unchecked{
     word-wrap: break-word;
     height: fit-content;
     list-style: none;
     padding: 0px;
-    text-align: left;
-    margin-left: 0px;
 }
 
-#todo-list-p2{ 
-    word-wrap: break-word;
-    height: fit-content;
-    list-style: none;
-    padding: 0px;
-    text-align: left;
-    margin-left: 0px;
-}
 
-#todo-list-p3{
-    word-wrap: break-word;
-    height: fit-content;
-    list-style: none;
-    padding: 0px;
-    text-align: left;
-    margin-left: 0px;
-}
-
-#todo-list-unchecked{
-    word-wrap: break-word;
-    height: fit-content;
-    list-style: none;
-    padding: 0px;
-    text-align: left;
-    margin-left: 0px;
-}
 
 li{
     display: flex;
-    justify-content: space-between;
-    text-align: left;
+    justify-content: space-between; 
+    align-items: center;
     border-radius: 30px;
     word-wrap: break-word;
-    height: fit-content;
+    padding: 0.2rem; 
+
     
 }
 
-.custom-icon {
-    display: inline-block;
-    width: 19px; /* Ajuste conforme necessário */
+li button{
+    border: none; 
+    background-color: transparent; 
+    margin-left: auto; /* Empurra o botão para o fim */
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    padding: 0;
+}
+
+
+.custom-icon{
+    display: block; 
+    width: 19px;
     height: 19px;
     background-image: url(icons/icone.png);
-    background-size: contain; /* Ajuste a imagem ao tamanho do ícone */
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    border: none; /* Remove borda */
-    margin: 0; /* Garante que não há margens desnecessárias */
-    padding: 0; /* Remove padding */
-    box-shadow: none; /* Remove sombras que pareçam bordas */
-    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+ li input{
+    vertical-align: middle;
+ }
+
+#desenho-flor{
+    max-width: 80px;
+    width: auto;
+    height: auto;
+    text-align: center;
     vertical-align: middle;
 }
 
-li button, .custom-icon{
-    outline: none;
-    border: none;
-}
-li button{
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer; /* Mantém o botão clicável */
-    background-color: transparent;
-}
-
-#todo-list-p1 li{
-    text-align: left;
+todo-list p+img{
+    margin: 5px;
 }
