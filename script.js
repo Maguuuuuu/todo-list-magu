@@ -20,8 +20,28 @@ function concluirTarefa(checkbox) {
 
     checkbox.remove();
 
-    marcarCheckbox.style.backgroundColor = 'rgb(253, 243, 244)'
+    marcarCheckbox.style.backgroundColor = 'rgb(253, 243, 244)';
     marcarCheckbox.style.textDecoration = "line-through";
+
+    const listaDeTarefas = document.querySelectorAll('#todo-list li');
+
+    //ADICIONAR MENSAGEM QUANDO TODAS AS TAREFAS SÃO CONCLUIDAS
+    if(listaDeTarefas.length===0){
+        const mensagem = document.createElement(!'p');
+        mensagem.innerHTML = '<p id="mensgaem">Arrasou! Você terminou todas as suas tarefas!</p>'
+        const imagemFlor = document.createElement('img')
+        imagemFlor.src = "imagens/imagem-flor.jpg";
+        imagemFlor.alt = "desenho colorido de uma flor";
+        imagemFlor.id = "desenho-flor";
+        document.getElementById('todo-list').appendChild(mensagem);
+        document.getElementById('todo-list').appendChild(imagemFlor);
+
+        //LIMPA A MENSAGEM CASO SEJAM ADICIONADOS NOVOS ITENS
+        document.getElementById('botao').onclick = function() { 
+            document.getElementById('todo-list').appendChild(mensagem).remove()
+            document.getElementById('todo-list').appendChild(imagemFlor).remove(); };
+    } 
+    
 }
  
     
@@ -40,7 +60,8 @@ function adicionarTarefa(event){
 
             const criarCheck = document.createElement('input');
             criarCheck.type = 'checkbox';
-            criarCheck.onclick = function() { concluirTarefa(this); };
+            criarCheck.onclick = function() { 
+                concluirTarefa(this); };
 
             const botaoRemover = document.createElement('button');
             botaoRemover.innerHTML = '<i class="custom-icon"></i>';
@@ -91,3 +112,4 @@ function adicionarTarefa(event){
             alert("Por favor, insira uma tarefa.");
         }
 }
+
