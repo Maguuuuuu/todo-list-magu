@@ -1,8 +1,8 @@
 
-
+//CHAMA A FUNÇÃO ADICIONAR TAREFA
 document.getElementById("botao").addEventListener("click",adicionarTarefa);
 
-
+//FUNÇÃO DE COCNLUIR A TAREFA QUE É CHAMADA NO ONCLICK NA HORA DE CRIAR O CHECKBOX NA FUNÇÃO ADICIONAR TAREFA. 
 function concluirTarefa(checkbox) {
     console.log("concluirTarefa");
     
@@ -10,7 +10,6 @@ function concluirTarefa(checkbox) {
     marcarCheckbox.remove();
     
     document.createTextNode(marcarCheckbox);
-
 
     document.getElementById('todo-list-checked').appendChild(marcarCheckbox);
 
@@ -44,14 +43,13 @@ function concluirTarefa(checkbox) {
     
 }
  
-    
+// FUNÇÃO PARA ADICIONAR TAREFA E COLOCAR A LISTA EM ORDEM
 function adicionarTarefa(event){
     event.preventDefault();
     console.log("função adicionar tarefa");
 
     const tarefa = document.getElementById('task').value;
  
-
         if(tarefa !== ""){
 
             var criarTarefa = document.createElement('li');
@@ -96,7 +94,7 @@ function adicionarTarefa(event){
                 } 
                 if(prioridade[i]){
                     document.getElementById('todo-list-unchecked').appendChild(criarTarefa);
-                    break; // o break que foi definitivo para deixar a lista em ordem
+                    break; // o break foi definitivo para deixar a lista em ordem
                 }
             }
             

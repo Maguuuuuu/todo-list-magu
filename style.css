@@ -2,7 +2,6 @@
 
 body{
     background-image: url(imagens/background2.jpg);
-    background-color: rgb(252, 253, 238);
     background-size: cover ;
     font-family: "EB Garamond", serif;
     font-optical-sizing: auto;
@@ -16,9 +15,7 @@ body{
     background-color: antiquewhite;
     padding-bottom: 10px;
     padding-top: 10px;
-    /* background-image:url(imagens/background-div4.jpg); */
     background-image: url(imagens/background-div.jpg);
-    /* background-image: url(imagens/backgroud-div2.jpg); */
     background-size: cover;
     text-align: center;
     border-style: dotted;
@@ -26,7 +23,6 @@ body{
 }
 
 h1{
-    /* font-family: 'CrossStichDelicate'; */
     font-family: "Borel", cursive;
     font-weight: 800;
     font-style: normal;
@@ -59,7 +55,6 @@ div{
     width: fit-content;
     margin-right: 10px;
     margin-left: 10px;
-    /* vertical-align: middle; */
 }
 
 #form-add-todo{
@@ -67,7 +62,6 @@ div{
     width: fit-content;
     margin: 10px;
     gap: 0.5rem;
-    /* padding: 10px; */
 }
 
 #task{
@@ -99,24 +93,18 @@ div{
 
 #lists{
     display: flex;
-    /* box-sizing: border-box; */
 }
 #todo-list{
     list-style: none;
     word-wrap: break-word;
     padding: 0;
-    /* border: 1px solid rgb(233, 219, 219); */
     display: block;
     margin-left: 1.6rem;
     margin-right: auto;
-    /* width: fit-content; */
     width: 15.3rem;
     background-color:rgb(253, 243, 244);
     border-radius: 20px;
     padding-bottom: 15px;
-    /* justify-content: flex-start;
-    align-items: flex-start; */
-    
 }
 
 #todo-list-checked{
@@ -138,9 +126,6 @@ div{
     margin-left: 10px;
 } 
 
-/* #todo-list:empty::after{
-    content: "Arrasou!!!!! Você terminou suas tarefas!"
-} */
 
 legend{
     background-color: rgb(253, 243, 244);
@@ -222,6 +207,3 @@ li button{
     vertical-align: middle;
 }
 
-todo-list p+img{
-    margin: 5px;
-}
