@@ -1,5 +1,5 @@
 
-//cama a função adicionarTarefaALista 
+//chama a função adicionarTarefaALista 
 document.getElementById("botao").addEventListener("click",adicionarTarefaALista);
 
 
@@ -66,7 +66,7 @@ function criarTarefa(){
 
     const botaoRemover = document.createElement('button');
     botaoRemover.innerHTML = '<i class="custom-icon"></i>';
-    botaoRemover.onclick = function () {  //remove a tarefa caso seja clicado n botãoRemover
+    botaoRemover.onclick = function () {  //remove a tarefa caso seja clicado no botãoRemover
         criarTarefaNova.remove();
         };
 
@@ -120,7 +120,7 @@ function ordenarLista(tarefaNova){
         }
     }
 
-     //DESMARCAR OS INPUTS TIPO RADIO
+     //desmarca os inputs tipo radio
      for (var i = 0; i < prioridade.length; i++) {
         prioridade[i].checked = false; 
     }
