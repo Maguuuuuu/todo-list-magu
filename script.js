@@ -1,5 +1,4 @@
 
-//chama a função adicionarTarefaALista 
 document.getElementById("botao").addEventListener("click",adicionarTarefaALista);
 
 
@@ -25,7 +24,7 @@ function concluirTarefa(checkbox) {
     const listaDeTarefas = document.querySelectorAll('#todo-list li');
 
     if(listaDeTarefas.length===0){
-      adicionarMensagem()  //chama a função adicionarMensagem
+      adicionarMensagem()  
     }
 }
 
@@ -45,7 +44,7 @@ function adicionarMensagem(){
     document.getElementById('todo-list').appendChild(imagemFlor);
 
      
-    document.getElementById('botao').onclick = function() { //deleta a mensagem caso seja adicionda mais alguma tarefa
+    document.getElementById('botao').onclick = function() { 
         mensagem.remove()
         imagemFlor.remove(); };
 }
@@ -66,7 +65,7 @@ function criarTarefa(){
 
     const botaoRemover = document.createElement('button');
     botaoRemover.innerHTML = '<i class="custom-icon"></i>';
-    botaoRemover.onclick = function () {  //remove a tarefa caso seja clicado no botãoRemover
+    botaoRemover.onclick = function () {  
         criarTarefaNova.remove();
         };
 
@@ -74,7 +73,7 @@ function criarTarefa(){
     criarTarefaNova.appendChild(criarTexto);
     criarTarefaNova.appendChild(botaoRemover);
 
-    return criarTarefaNova;  // retorna a tarefa escrita no input + o check + botão de excluir
+    return criarTarefaNova; 
 }
  
 
@@ -85,13 +84,13 @@ function adicionarTarefaALista(event){
     event.preventDefault();
 
     if(document.getElementById('task').value !== ''){
-        const tarefaNova = criarTarefa() //chama a função criarTarefa e tranforma a const tarefaNova no valor que foi retornado na função criarTarefa
-        ordenarLista(tarefaNova) //chama a função ordenarLista e passa como parametro a const tarefaNova que vai ser utilizada na função 
+        const tarefaNova = criarTarefa()
+        ordenarLista(tarefaNova) 
     } else {
         alert("Por favor, insira uma tarefa.");
     }   
 
-    document.getElementById('task').value = ""; //limpa o input
+    document.getElementById('task').value = ""; 
 } 
 
 function ordenarLista(tarefaNova){
@@ -116,11 +115,10 @@ function ordenarLista(tarefaNova){
         } 
         if(prioridade[i]){
             document.getElementById('todo-list-unchecked').appendChild(tarefaNova);
-            break; // o break foi definitivo para deixar a lista em ordem
+            break; 
         }
     }
 
-     //desmarca os inputs tipo radio
      for (var i = 0; i < prioridade.length; i++) {
         prioridade[i].checked = false; 
     }
